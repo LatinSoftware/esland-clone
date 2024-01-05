@@ -1,0 +1,25 @@
+---
+interface Props {
+  class?: string;
+  url: string;
+}
+
+const { url, class: css } = Astro.props;
+---
+
+<a
+  href={url}
+  class={`
+${css}
+uppercase text-xl font-semibold border 
+rounded-full border-white py-3 px-4 text-center text--glow
+`}
+>
+  <slot />
+</a>
+
+<style>
+  .text--glow:hover {
+    box-shadow: 0 0 30px #fff8;
+  }
+</style>
