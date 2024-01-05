@@ -1,0 +1,96 @@
+---
+import HeroContainer from "@components/HeroContainer.astro";
+import Layout from "@layouts/Layout.astro";
+import Kit from "@components/Kit.astro"
+---
+
+<Layout
+  title="Premios ESLAND - Info"
+  description="Información sobre los premios ESLAND"
+>
+  <HeroContainer image="/info-bg.webp">
+    <h1 class="uppercase text-5xl mb-20">Los premios esland</h1>
+  </HeroContainer>
+
+  <main>
+    <section class="w-full grid grid-cols-2 p-24 gap-5">
+      <article>
+        <h2
+          class="font-semibold text-5xl text-balance leading-tight animate-fade-up"
+        >
+          Un reconocimiento único para creadores, creadoras y comunidades que
+          buscan su lugar en el mundo del entretenimiento en directo.
+        </h2>
+        <p class="text-xl my-4 animate-fade-up animate-delay-100 text-pretty">
+          Los Premios ESLAND son una iniciativa privada promovida por el célebre
+          streamer TheGrefg y buscan apoyar y reconocer la creación de contenido
+          en el ámbito hispanohablante.
+        </p>
+        <p class="text-xl animate-fade-up animate-delay-200 text-pretty">
+          ESLAND es el acrónimo de ESPAÑA, LATINOAMÉRICA Y ANDORRA, tres
+          localizaciones geográficas que comparten el idioma que las une más
+          allá de cualquier frontera, ya sea física o virtual.
+        </p>
+      </article>
+      <img class="rounded-md" src="/info-img1.png" alt="la gala" />
+    </section>
+
+    <section
+      class="w-full grid grid-cols-2 p-24 gap-5 bg-gradient gradient-animated"
+    >
+      <img class="rounded-md" src="/info-img4.png" alt="la gala" />
+      <article>
+        <h2
+          class="font-semibold text-5xl text-balance leading-tight animate-fade-up px-10"
+        >
+          EL PREMIO A LA CREACIÓN
+        </h2>
+        <p
+          class="text-xl my-4 px-10 animate-fade-up animate-delay-100 text-pretty"
+        >
+          El trofeo que se entrega a los ganadores y ganadoras en la ceremonia
+          es una representación de la letra “A” dividida en tres fragmentos y
+          ensambladas a modo de artilugio futurista sobre el que se construye la
+          narrativa del evento.
+        </p>
+        <p class="text-xl px-10 animate-fade-up animate-delay-200 text-pretty">
+          Un artefacto de origen desconocido que dota de herramientas y
+          habilidades para la creación. Una metáfora sobre la emancipación del
+          talento gracias a la tecnología y la irrupción de los creadores de
+          contenido en el mundo del entretenimiento.
+        </p>
+      </article>
+    </section>
+    <section class="flex flex-col items-center p-24 pb-6 w-full gap-8">
+      <h2 class="uppercase font-bold text-5xl py-2">Kit de prensa</h2>
+      <div class="grid grid-cols-3 gap-5 w-full">
+        <Kit title="LOGOTIPO Y TROFEO" url="#" img="/logo-y-trofeo.png" />
+        <Kit title="FONDOS DE PANTALLA" url="#" img="/fondos-de-pantalla.png" />
+        <Kit title="NOTA DE PRENSA" url="#" img="/nota-de-prensa.png" />
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  section.bg-gradient {
+    background: linear-gradient(70deg, #000527 47%, #1682c7 80%);
+    background-size: 120% 120%;
+  }
+
+  .gradient-animated {
+    animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>

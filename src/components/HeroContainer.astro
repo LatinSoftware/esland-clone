@@ -1,0 +1,17 @@
+---
+interface Props {
+  image: string;
+}
+
+const { image } = Astro.props;
+---
+
+<div
+  class="relative h-[90vh] w-full max-w-[100vw] bg-no-repeat bg-cover clip"
+  style={`background-image: url('${image}')`}
+>
+<div class="absolute inset-0 m-auto w-full h-full flex justify-center flex-col items-center
+">
+  <slot />
+</div>
+</div>
