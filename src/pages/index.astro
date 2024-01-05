@@ -1,24 +1,6 @@
 ---
-import Bento from '../components/Bento.astro';
-import Footer from '../components/Footer.astro';
-import Intro from '../components/Intro.astro';
-import Prefooter from '../components/Prefooter.astro';
-import Video from '../components/Video.astro';
-import Layout from '../layouts/Layout.astro';
+import App from "../components/pages/App.astro";
+
 ---
 
-<Layout title="Premios ESLAND 2024 - Celebrando lo mejor del streaming y los creadores de contenido"
-	description = "Descubre a los mejores creadores de contenido de España y Latinoamerica. ¡Vota por tus favoritos! Celebra la innovacion yu el talento de Twitch, Youtubey más"
->
-	<Video />
-	<main>
-		<Intro />
-		<Bento />
-		<Prefooter/>
-	</main>
-	<Footer/>
-</Layout>
-
-<style>
-	
-</style>
+<App />
