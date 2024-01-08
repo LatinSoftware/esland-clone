@@ -5,7 +5,7 @@ import Logo from "./Logo.astro";
 <footer class="bg-black/40 mt-24">
   <div class="mx-auto w-full max-w-[1400px] p-20 py-6 lg:py-8">
     <div class="md:flex md:justify-between">
-      <div class="mb-6 md:mb-0 flex flex-col">
+      <div class="mb-6 md:mb-0 flex flex-col items-center md:items-baseline ">
         <a href="https://flowbite.com/" class="flex items-center -mt-16">
           <Logo class="w-32 h-auto" />
         </a>
@@ -60,7 +60,7 @@ import Logo from "./Logo.astro";
       </div>
       <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
         <div>
-          <h2 class="mb-6 text-2xl font-semibold text-white uppercase">
+          <h2 class="mb-6 text-xl md:text-2xl font-semibold text-white uppercase">
             Legal
           </h2>
           <ul class="text-gray-500 dark:text-gray-400 font-medium">
@@ -76,7 +76,7 @@ import Logo from "./Logo.astro";
           </ul>
         </div>
         <div>
-          <h2 class="mb-6 text-2xl font-semibold text-white uppercase">
+          <h2 class="mb-6 text-xl md:text-2xl font-semibold text-white uppercase">
             Web Map
           </h2>
           <ul class="text-gray-400 font-medium">
@@ -91,8 +91,8 @@ import Logo from "./Logo.astro";
             </li>
           </ul>
         </div>
-        <div>
-          <h2 class="mb-6 text-2xl font-semibold text-white uppercase">
+        <div class="col-span-2 md:col-span-1">
+          <h2 class="mb-6 text-xl sm:text-2xl font-semibold text-white uppercase">
             Producido Por
           </h2>
           <ul class="text-gray-400 font-medium">
@@ -189,7 +189,3 @@ import Logo from "./Logo.astro";
     </div>
   </div>
 </footer>
-
-<style>
-  
-</style>
