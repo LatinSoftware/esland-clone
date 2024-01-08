@@ -1,18 +1,62 @@
 ---
 import Logo from "./Logo.astro";
+import MenuButton from "./MenuButton.astro";
+import MobileMenu from "./MobileMenu.astro";
 ---
 
-<header id="header-nav" class="fixed w-screen h-auto grid grid-cols-3 items-center justify-items-center justify-center z-20  top-0 px-8 lg:px-0 ">
+<header
+  id="header-nav"
+  class="fixed 
+  w-screen h-auto 
+  grid grid-cols-2 
+  md:grid-cols-3 
+  items-center  justify-center z-20 top-0 px-6 lg:px-8"
+>
   <a href="/">
-    <Logo class="w-11 justify-self-center " />
+    <Logo class="w-11 justify-self-center" />
   </a>
-  <nav>
+  <nav class="hidden md:inline-block">
     <ul class="flex flex-row gap-4 justify-center">
-      <li class="uppercase hover:underline text--glow"><a href="/info">Info</a></li>
-      <li class="uppercase hover:underline text--glow"><a href="/archivos">Archivo</a></li>
+      <li class="uppercase hover:underline text--glow">
+        <a href="/info">Info</a>
+      </li>
+      <li class="uppercase hover:underline text--glow">
+        <a href="/archivos">Archivo</a>
+      </li>
     </ul>
   </nav>
-  <a href="#" class="border rounded-full inline-block border-white px-4 py-2
-  hover:bg-white hover:text-black duration-300 uppercase"> ESLAND: El Documental</a>
-</header>
+  <a
+    href="#"
+    class="border rounded-full border-white px-4 py-2
+  hover:bg-white hover:text-black 
+  duration-300 uppercase hidden md:inline-block max-w-[250px] ">
+    ESLAND: El Documental</a
+  >
 
+  <div class="justify-self-end z-30 md:hidden">
+    <MenuButton />
+  </div>
+
+  <MobileMenu />
+
+</header>
+<script>
+  const bgContainer = document.getElementById('bg-container')
+  const menuIcon = document.getElementById('mobile-menu')
+
+  let isOpen = false
+  menuIcon?.addEventListener("click", () => {
+    
+    console.log("clicked")
+    if(!isOpen){
+      bgContainer?.classList.add('bg-show')
+      isOpen = true
+    }else{
+      // bgContainer?.classList.add('bg-hide')
+      bgContainer?.classList.remove('bg-show')
+      isOpen = false
+    }
+    
+  })
+
+</script>

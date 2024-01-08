@@ -101,4 +101,24 @@ const { title, description } = Astro.props;
   .clip{
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 50% 100%, 0 85%);
   }
+
+  .background {
+    height: 0px;
+    background: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(513px);
+    box-shadow:
+      0px 50px 50px -5px hsla(0, 0%, 100%, 0.1),
+      0px 0px 0 1px hsla(0, 0%, 100%, 0.1);
+
+    transition: all .5s ease-in;  
+
+  }
+
+  .bg-show {
+    height: 100vh;
+  }
+
+  .bg-hide {
+    height: 0vh;
+  }
 </style>
